@@ -1,0 +1,483 @@
+/* =========================
+   PAGE HEADER
+========================= */
+
+.rides-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.rides-page-header h1 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.rides-page-header p {
+    color: #777;
+    font-size: 13px;
+}
+
+.add-ride-btn {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.add-ride-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RIDE STATS
+========================= */
+
+.ride-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.ride-stat {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.ride-stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 9px;
+    background: #fee2e2;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ride-stat h3 {
+    font-size: 22px;
+}
+
+.ride-stat p {
+    font-size: 10px;
+    color: #888;
+}
+
+
+/* =========================
+   RIDES CARD
+========================= */
+
+.rides-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.rides-toolbar {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-box {
+    width: 320px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 8px;
+}
+
+.search-box span {
+    font-size: 13px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 11px;
+}
+
+.filter-box select {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    font-size: 11px;
+    background: white;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.rides-card table {
+    width: 100%;
+    min-width: 950px;
+    border-collapse: collapse;
+}
+
+.rides-card th {
+    background: #fafafa;
+    padding: 14px 16px;
+    color: #777;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.rides-card td {
+    padding: 16px;
+    border-top: 1px solid #eee;
+    font-size: 11px;
+    color: #555;
+}
+
+
+/* =========================
+   RIDE INFO
+========================= */
+
+.ride-table-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ride-image {
+    width: 42px;
+    height: 42px;
+    background: #111;
+    color: white;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ride-table-info strong {
+    display: block;
+    color: #222;
+    font-size: 11px;
+}
+
+.ride-table-info span {
+    color: #999;
+    font-size: 9px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.ride-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.ride-status.open {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.ride-status.completed {
+    background: #e5e7eb;
+    color: #555;
+}
+
+.ride-status.closed {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.ride-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.action-btn {
+    border: none;
+    padding: 7px 9px;
+    border-radius: 5px;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.action-btn.view {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.action-btn.edit {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.action-btn.delete {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.action-btn:hover {
+    opacity: .75;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    border-top: 1px solid #eee;
+}
+
+.pagination button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.pagination button.current,
+.pagination button:hover {
+    background: #dc2626;
+    color: white;
+    border-color: #dc2626;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.ride-modal {
+    background: white;
+    width: 650px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+}
+
+
+/* MODAL HEADER */
+
+.modal-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 18px;
+}
+
+.modal-header p {
+    font-size: 10px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.close-modal {
+    border: none;
+    background: #f1f1f1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* FORM */
+
+#rideForm {
+    padding: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 11px;
+    outline: none;
+    font-size: 11px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #dc2626;
+}
+
+
+/* MODAL FOOTER */
+
+.modal-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-btn {
+    border: none;
+    background: #eee;
+    padding: 10px 17px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.save-btn {
+    border: none;
+    background: #dc2626;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 1000px) {
+
+    .ride-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 700px) {
+
+    .rides-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .add-ride-btn {
+        width: 100%;
+    }
+
+    .rides-toolbar {
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .filter-box select {
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .ride-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+}
+

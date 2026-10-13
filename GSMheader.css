@@ -1,0 +1,238 @@
+
+header nav{
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; 
+  border-bottom: 1px solid #555;
+}
+nav .logo{
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+nav .nav-items ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-items ul li{
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+/* Navigation Hover Effect */
+
+nav .nav-items ul li a{
+    position: relative;
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    font-family:"Oswald",sans-serif;
+    text-transform:uppercase;
+    padding:8px 0;
+    transition:.3s ease;
+}
+
+
+/* Animated underline */
+
+nav .nav-items ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:3px;
+    background:#c41e3a;
+    transition:.3s ease;
+}
+
+
+/* Hover */
+
+nav .nav-items ul li a:hover{
+    color:#c41e3a;
+    transform:translateY(-3px);
+    text-shadow:0 0 10px rgba(196, 30, 58, 0.7);
+}
+
+
+nav .nav-items ul li a:hover::after{
+    width:100%;
+}
+
+nav .nav-items ul li a:hover{
+    color:#c41e3a;
+    letter-spacing:1px;
+}
+nav .nav-items ul li a.active{
+    color:#c41e3a;
+}
+
+nav .nav-items ul li a.active::after{
+    width:100%;
+}
+
+
+nav .btn{
+  display:inline-block;
+    background:#c41e3a;
+    color:#000;
+    padding:8px 20px;
+    text-decoration:none;
+    text-transform:uppercase;
+    border:2px solid transparent;
+    transition:.3s;
+    border-radius: 0px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+nav .btn:hover{
+  background-color: transparent;
+  color: #c41e3a;
+  border: 1px solid #c41e3a;
+  transition: 0.3s;
+} 
+nav .mobile-btn{
+  display: none;
+}
+/* ---------------- NAV ---------------- */
+
+header{
+    position: relative;
+    z-index: 1000;
+}
+
+nav{
+    position: relative;
+}
+
+.hamburger{
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 2000;
+}
+
+.hamburger span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+    transition: .4s;
+}
+
+/* Animation */
+
+.hamburger.active span:nth-child(1){
+    transform: rotate(45deg) translate(7px,6px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(7px,-6px);
+}
+
+.mobile-btn{
+    display: none;
+}
+
+/* ---------------- TABLET & MOBILE ---------------- */
+
+@media(max-width:991px){
+
+    .desktop-btn{
+        display:none;
+    }
+
+    .mobile-btn{
+        display:inline-block;
+        /* margin-top:30px; */
+        margin-left: 30px;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav-items{
+        position: fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:transparent;
+        backdrop-filter: blur(10px);
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        transition:.4s ease;
+        z-index:1500;
+        box-shadow:-5px 0 15px rgba(0,0,0,.5);
+    }
+
+    .nav-items.active{
+        right:0;
+    }
+
+    .nav-items ul{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        padding:0;
+    }
+
+    .nav-items ul li{
+        margin:20px 0;
+    }
+
+    .nav-items ul li a{
+        font-size:22px;
+    }
+    nav .desktop-btn{
+      display: none;
+    }
+    nav .mobile-btn{
+      display: block;
+    }
+}
+
+/* ---------------- SMALL MOBILE ---------------- */
+
+@media(max-width:576px){
+
+    header nav{
+        height:80px;
+    }
+
+    .logo img{
+        width:70px;
+        height:70px;
+    }
+
+    .nav-items{
+        width:100%;
+    }
+    nav .desktop-btn{
+      display: none;
+    }
+    nav .mobile-btn{
+     display: block;
+    }
+
+}
